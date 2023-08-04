@@ -18,9 +18,10 @@ class Pais:
 
     def getSuperficie(self):
         return self.__superficie
-    
+
     def sumaSuperficie(self,):
         self.__superficie
+        lista = []
         sum=0
         for x in lista:
             sum+=x
