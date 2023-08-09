@@ -12,11 +12,12 @@ cursor.execute('SHOW DATABASES')
 for dbs in cursor:
     print(dbs)
 
+lista_lau= []
 # cursor.execute("SHOW TABLES")
 # for n in cursor:
 #     print(n)
     
-# cursor.execute("""INSERT INTO sellers (seller_id, name_seller)VALUES (4,'MATEO VARGAS') """)
+# cursor.execute("""INSERT INTO sellers (seller_id, name_seller)VALUES (6,'MATEO VARGAS') """)
 # db_lau.commit()
 # cursor.execute('select * from sellers')
 for sel in cursor:
@@ -25,7 +26,7 @@ for sel in cursor:
 
 #cursor.execute("""UPDATE products set desciption='solo productos, info privada' where id_products=1 """)
 # db_lau.commit()
-cursor.execute('SELECT * FROM  products')
+cursor.execute('SELECT * FROM  productos')
 for sel in cursor:
     print(sel)
 
