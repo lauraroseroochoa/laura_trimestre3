@@ -1,0 +1,31 @@
+h1 {
+    color: rgb(2, 112, 116);
+}
+
+/* probando colores y fuentes */
+p {
+    color: purple;
+    font-size: 16pt;
+}
+
+#historia {
+    color: blueviolet;
+    font-size: 12pt;
+}
+
+#relato {
+    color:rgb(28, 159, 163)
+}
+
+.encabezado {
+    font-size: 20pt;
+    text-transform: uppercase;
+}
+
+* warning{
+    color:brown; /* los asteriscos son selectores universales*/
+}
+
+.autor, .fecha, .ubicacion {
+    text-decoration: underline;
+}
