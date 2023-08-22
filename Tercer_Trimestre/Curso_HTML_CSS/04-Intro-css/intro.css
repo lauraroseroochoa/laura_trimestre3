@@ -1,0 +1,18 @@
+/* estilos para colores*/
+.colores {
+    color:blueviolet;
+
+}
+
+.color-exadecimal {
+    color: 264653;
+
+}
+
+.color-rgb {
+    color: rgb(128, 5, 30)
+}
+
+.color-rgba {
+    color:rgba(39, 4, 92, 0.2)
+}
