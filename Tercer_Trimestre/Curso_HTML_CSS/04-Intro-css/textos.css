@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300&display=swap');
+
+/*fonts google*/
+html {
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    font-family: 'Bricolage Grotesque', sans-serif;
+
+    font-size: 20pt;
+    font-weight: 400;
+}
