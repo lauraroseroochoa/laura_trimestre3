@@ -1,0 +1,67 @@
+.domino{
+    width:600px;
+    height: 600px;
+    position: relative;
+    
+}
+.d1{
+    width:200px;
+    height: 230px;
+    background: rgb(24, 148, 144);
+    position: relative;
+
+}
+
+.ficha{
+    position: absolute;
+    width:60px;
+    height:60px;
+    background: rgb(80, 38, 134);
+    border-radius: 50%;
+}    
+.ficha1{    
+    margin: 10px 10px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+.ficha2{
+    margin:10px 120px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.ficha3{
+    margin:80px 10px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.ficha4{
+    margin:160px 10px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.ficha5{
+    margin:80px 120px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.ficha6{
+    margin:160px 120px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.d2{
+    width:200px;
+    height: 230px;
+    background: rgb(71, 192, 188);
+    position: relative;
+
+}
