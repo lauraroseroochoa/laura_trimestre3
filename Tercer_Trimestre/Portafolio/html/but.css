@@ -1,0 +1,33 @@
+.but {
+    background: #000000; 
+    color: rgb(143, 86, 248); 
+    border: 2px solid rgb(72, 20, 170);
+    padding: 16px 20px;
+    border-radius: 3px; 
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    
+}
+.but:hover {
+color: #fff;
+}
+.but::after {
+content: "";
+background: rgb(124, 108, 158);
+position: absolute;
+z-index: -1;
+padding: 16px 20px;
+display: block;
+left: -20%;
+right: -20%;
+top: 0;
+bottom: 0;
+transform: skewX(45deg) scale(0, 1);
+transition: all 0.3s ease;
+}
+.but:hover::after {
+transition: all 0.5s ease-out;
+transform: skewX(-90deg) scale(1, 1);
+}
