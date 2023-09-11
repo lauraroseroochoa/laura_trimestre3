@@ -30,6 +30,13 @@ header {
 .section1 h2 {
     color: white;
 }
+
+
+.seccion section2:nth-child(odd) {
+    background-color: #ffffff;
+    height: 800px;
+}
+
 #img1 {
     border-radius: 100px;
     position: absolute;

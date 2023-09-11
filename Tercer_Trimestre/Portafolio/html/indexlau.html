@@ -14,50 +14,62 @@
             <DIV class="nombre"><h2>LAURA ROSERO</h2></DIV>
             <img id="img1" src="https://static.vecteezy.com/system/resources/previews/011/801/494/large_2x/luxury-letter-l-logo-royal-gold-star-vector.jpg" alt="logo" width="100px" height="100px">
                 <nav class="encabezado">
-                    <button class="but">Home</button>
-                    <button class="but">My Skills</button>
-                    <button class="but">Projects</button>
-                    <button class="but">Studies</button>
+                    <button class="but" data-target="home">Home</button>
+                    <button class="but" data-target="skills">My Skills</button>
+                    <button class="but" data-target="projects">Projects</button>
+                    <button class="but" data-target="studies">Studies</button>
+                    
                 </nav>
         </header>
-            <section class="section1">
+            <section class="section1" id="home">
                 <h2>Presentation</h2>
                 <article class="text1">
-                    Soy una persona responsable, responsable que trabaja en  equipo 
+                    Soy una persona responsable, que trabaja en  equipo y busca superar todos desafios que se presenten 
                 </article>
                 <br>
                 <article class="text2">
                     <img id="img2" src="https://www.saludterapia.com/images/saludterapia/general/3752/algo-emocional.jpg" alt="foto" width="100px" height="100px">
-                    Contenido:
-                    A través de la experiencia práctica como intérprete del violín, la autora plasma en este
-                    artículo la intención comunicativa de la música y destaca los valores emocionales y
-                    expresivos que los músicos sienten y perciben a través de la música que interpretan,
-                    proyectando sus sensaciones al oyente. Con una visión muy personal, muestra cómo la
-                    función comunicadora de los intérpretes ha existido siempre a lo largo de la historia de
-                    la música, y recuerda las figuras más representativas de todos los tiempos que desempeñaron su actividad como intérpretes-comunicadores y como creadores-expresivos.
+                    Personal information:
+                    Mi nombre es Laura Rosero tengo 18 años, soy colombiana y estudio un Tecnologo en analisis y desarrollo de software en el SENA tambien estudio ingles, soy buena en front-end y en back-end en lenguajes como python 
                 </article>
                 
-
             </section>
+
         </div>
-            <section class="section2">
+            <section class="section2" id="skills">
                 <h1>-----</h1>
 
             </section>
-            <section class="section3">
+            <section class="section3" id="projects">
                 <h1>-----</h1>
 
             </section>
-            <section class="section4">
+            <section class="section4" id="studies">
                 <h1>-----</h1>
 
             </section>
 
         </main>
-        <footer class="pie">
+        <footer class="pie" >
             <h2>&copy; Laura Tatiana Rosero.</h2>
-        </footer>
+        </footer>    
 
-    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const buttons = document.querySelectorAll(".but");
+            
+                buttons.forEach(button => {
+                    button.addEventListener("click", function() {
+                        const targetId = button.getAttribute("data-target");
+                        const targetSection = document.getElementById(targetId);
+            
+                        if (targetSection) {
+                            targetSection.scrollIntoView({ behavior: "smooth" });
+                        }
+                    });
+                });
+            });
+            </script>
+            
 </body>
 </html>
