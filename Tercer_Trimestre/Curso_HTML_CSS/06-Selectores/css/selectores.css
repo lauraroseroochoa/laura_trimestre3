@@ -1,0 +1,9 @@
+p-contenedor {
+    color: gray;
+}
+body main .contenedor p {
+    color:aqua;
+}
+.contenedor #boton-contenedor {
+    background-color: blueviolet;
+}

@@ -1,0 +1,26 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    height: 300px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.contenido-1 {
+    background-color: rgb(26, 98, 165);
+    width: 100px;
+    border: 1 px solid black;
+}
+
+.contenido-2 {
+    background-color: white;
+    width: 100px;
+    border: 1 px solid black;
+}
+
+.contenido-3 {
+    background-color: white;
+    width: 100px;
+    border: 5 px solid black;
+}
