@@ -63,8 +63,12 @@ header {
 }
 .presen{
     text-align: center;
-    margin-top: -60px;
+    margin-top: -10px;
+    color: black;
 
+}
+.presen h2 {
+    color: black;
 }
 .saturno {
     display: grid;
@@ -88,21 +92,30 @@ header {
     background-color: aliceblue;
     margin-top: -360px;
     margin-left: 1000px;
-    width: 300px;
+    width: 210px;
     height: 300px;
     border-radius: 1rem;
 }
+.foto_laura img {
+    border-radius: 2rem;
+}
 .chat_me {
     position: relative;
+    justify-content: center;
+    align-items: center;
     margin-left: 1180px;
     margin-top: 50px;
     width: 113px;
     height: 70px;
-    background-color: #0d173b00;
-    backdrop-filter: blur(3px);
+    background-color: rgb(121, 7, 173);
+    border-radius: 1rem;
+    backdrop-filter: blur(15px);
     color: #fcbf74;
     font-size: 15px;
-    text-shadow: 2px 2px 5px #000; box-shadow: 3px 3px 10px #49125d;
+    text-shadow: 2px 2px 5px #000000; box-shadow: 3px 3px 10px #49125d;
+}
+.chat_me h3{
+    margin-top: -5px;
 }
 .chat_img{
     position: relative;
@@ -152,6 +165,7 @@ header {
     justify-content: center;
     background-color: rgb(47, 66, 78);
 }
+
 
 
 /* rgb(158, 92, 107) */
