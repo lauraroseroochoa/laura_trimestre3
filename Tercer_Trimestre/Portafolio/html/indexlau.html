@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Laura</title>
-    <link rel="stylesheet" href="../css/portafolio.css">
-    <link rel="stylesheet" href="../css/but.css">
-    <link rel="stylesheet" href="../css/galeriaC.css">
+    <link rel="stylesheet" href="../css/pull.css">
 </head>
 <body>
     <div class="contenedor">
         <header>
             <div class="header1"><h1>PORTAFOLIO DESARROLLADOR</h1> </div>
             <DIV class="nombre"><h2>LAURA ROSERO</h2></DIV>
-            <img id="img1" src="https://static.vecteezy.com/system/resources/previews/011/801/494/large_2x/luxury-letter-l-logo-royal-gold-star-vector.jpg" alt="logo" width="100px" height="100px">
+            <img id="img1" src="https://static.vecteezy.com/system/resources/previews/011/801/494/large_2x/luxury-letter-l-logo-royal-gold-star-vector.jpg" alt="logo" width="80px">
                 <nav class="encabezado">
                     <button class="but" data-target="home">Home</button>
                     <button class="but" data-target="skills">My Skills</button>
@@ -41,32 +39,73 @@
                 </div>
 
                 <div class="chat_me">
-                    <a href="chat_me.html"><img class="chat_img" src="/html/img/chat_me.png" alt="" width="50px"></a>
+                    <a href="chat_me.html"><img class="chat_img" src="../img/chat_me.png" alt="" width="30px"></a>
                     <h3 class="chat_with">Chat with me<meta http-equiv="X-UA-Compatible" content="IE=7"></h3>
                 </div>
 
                 <div class="contactos">
-                    <a href=""><img src="/html/img/pngwing.com.png" alt="" width="50px"></a>
-                    <a href=""><img src="/html/img/git.png" alt=""width="50px"></a>
-                    <a href=""><img src="/html/img/ins.png" alt=""width="50px"></a>
-                    <a href=""><img src="/html/img/twi.png" alt=""width="50px"></a>
+                    <a href="https://wa.me/qr/CA4DWCMTS4E4K1"><img src="../img/pngwing.com.png" alt="" width="50px"></a>
+                    <a href="https://github.com/lauraroseroochoa"><img src="../img/git.png" alt=""width="50px"></a>
+                    <a href="https://www.instagram.com/laura.rosero_t/"><img src="../img/ins.png" alt=""width="50px"></a>
+                    <a href="https://twitter.com/LauraRo19296831"><img src="../img/twi.png" alt=""width="50px"></a>
                 </div>
 
 
 
             </section>
-
         </div>
-            <section class="section2" id="skills">
-                <h1>-----</h1>
 
+        
+            <section class="section2" id="skills">
+                
+                    <button class="div_skills" id="skill_1">Creatividad</button>
+               
+                    <button class="div_skills" id="skill_1">Liderazgo</button>
+               
+                    <button class="div_skills" id="skill_1">Comunicacion asertiva</button>
+               
+                    <button class="div_skills" id="skill_1">Empatía</button>
+               
+                    <button class="div_skills" id="skill_1">Pensamiento critico</button>
+               
+                    <button class="div_skills" id="skill_1">Proactividad</button>
             </section>
+
+            
             <section class="section3" id="projects">
-                <h1>-----</h1>
+                <div class="header3"><h1>PROJECTS</h1> </div>
+
+                <div class="firts">
+                    
+                    <h1 class="texts">#1</h1>
+                    <div class="info1">
+                      <p class="text info" style="color: aliceblue;">Information</p>
+                      <span><h1>Lorem onsequatur perferendis commodi officiis maxime animi sunt qui?</h1></span>
+                    </div>
+                </div>
+                <div class="second">
+                    <h1 class="texts">#2</h1>
+                    <div class="info1">
+                      <p class="text info" style="color: aliceblue;">Information</p>
+                      <span><h1>Lorem onsequatur perferendis commodi officiis maxime animi sunt qui?</h1></span>
+                    </div>
+                </div>
+               
 
             </section>
             <section class="section4" id="studies">
-                <h1>-----</h1>
+                <div class="header4"><h1>STUDIES</h1> </div>
+                <div class="flex">
+                    <section class="c1">
+                        <div class="contenido-1" id="contenidoSe4">Tecnico en programacion de software</div>
+                        <div class="contenido-2" id="contenidoSe4">Nivel B1 en ingles</div>
+                    </section> 
+                    <section class="c2">
+                        <div class="contenido-1" id="contenidoSe4">Tecnologo en analisis y desarrollo de software</div>
+                        <div class="contenido-2" id="contenidoSe4">Analitica de datos con perspectiva ética</div>
+                    </section> 
+                        
+                </div>
 
             </section>
 
@@ -90,7 +129,20 @@
                     });
                 });
             });
-            </script>
+            
+            /*scrip para animar el encabezado*/
+                        document.addEventListener("DOMContentLoaded", function() {
+                const header = document.querySelector("header"); /*se selecciona el elemento encabezado*/
+
+                window.addEventListener("scroll", function() {
+                    if (window.scrollY > 0) {
+                        header.classList.add("header-scroll"); /*se agrega a la clase de scroll al encabezado al hacer scroll hacia abajo */
+                    } else {
+                        header.classList.remove("header-scroll"); /* quita la clase de scroll al volver al principio de la pagina*/
+                    }
+                });
+            });
+        </script>
             
 </body>
 </html>

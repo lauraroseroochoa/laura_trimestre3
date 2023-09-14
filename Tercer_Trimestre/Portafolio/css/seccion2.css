@@ -1,0 +1,25 @@
+.section2 {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.div_skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vw;
+    height: 250px;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(5px);
+
+}
+
+.div_projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vw;
+    height: 250px;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(5px);
+}
