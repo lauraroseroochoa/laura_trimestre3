@@ -1,0 +1,40 @@
+@import"../node_modules/bootstrap/scss/functions";
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+}
+
+#menu a {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+#menu form > button{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.carousel-inner {
+    max-height: 39rem;
+}
+
+
+
+
+
+
+
+@media (max-width:768) {
+    #intro{
+        width:90% !important;
+    }
+    .servicio-fila {
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+
+
