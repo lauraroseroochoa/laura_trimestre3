@@ -1,8 +1,6 @@
-@import"../node_modules/bootstrap/scss/functions";
-
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    overflow: hidden;
+    
 }
 
 #menu a {
@@ -20,8 +18,42 @@ body {
     max-height: 39rem;
 }
 
+.bg-contacto {
+    position:relative;
+    top: -130px;
+}
+#contacto-section {
+    background-color: aqua;
+    min-height: 500px;
+    position: relative;
+}
 
+#contenedor-formulario{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    max-width: 500px;
+}
+#titulo-formulario {
+    color:rgb(8, 8, 8);
+}
 
+footer {
+    background: aqua;
+    min-height: 100px;
+}
+footer p {
+    color:rgb(10, 10, 10);
+    text-align:center;
+}
+#iconos i {
+    font-size:26px ;
+    padding: 0 8px;
+    color:rgb(14, 13, 13);
+}
 
 
 
@@ -33,6 +65,9 @@ body {
     .servicio-fila {
         width: 100% !important;
         text-align: center;
+    }
+    .bg-contacto {
+        top: -110px;
     }
 }
 
