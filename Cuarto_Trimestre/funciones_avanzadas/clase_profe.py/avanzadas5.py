@@ -2,7 +2,7 @@ def base(funcion): # se declara la funcion base
     
     def interna(*args,**kwargs):
         print('Inicia la función base')
-        print(funcion(*args,*kwargs))#*        
+        print(funcion(*args,*kwargs))#*    # se imprime la funcion que se da como parametro en la base condos parametros   
         #return funcion(n1,n2)
         #funcion(n1,n2)
         print('Finaliza la función base')
