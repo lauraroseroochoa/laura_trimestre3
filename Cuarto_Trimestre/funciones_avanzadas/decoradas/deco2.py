@@ -21,8 +21,10 @@ def verificar_usuario(diccio):
         if key==usuario and value==contraseña:
             print('usuario autenticado')
             print(usuario)
-    else:
-        print('no se encuentra en el sistema')
+    for key,value in diccio.items():
+        if key!=usuario and value!=contraseña:
+            print('no se encuentra en el sistema')
+            
 
 
 verificar_usuario(diccionario)
