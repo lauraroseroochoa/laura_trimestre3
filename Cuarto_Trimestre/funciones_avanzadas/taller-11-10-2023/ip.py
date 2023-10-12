@@ -78,21 +78,15 @@ def ip_host (args):
             print(False)     
 
 @ip
-def ip_class (args):
+def ip_priv_publi (args):
     tupla = conversion (args)
     for i in tupla:
-        if i > 1 and i < 126255255.255:
-            print(f"{i} es IP PUBLICA clase A")
-        elif i > 12800.0 and i < 191255255.255:
-            print(f"{i} es de Clase B (redes medianas)")
-        elif i > 19200.0 and i < 2232515255.255:
-            print(f"{i} es de Clase C (redes pequeñas)")
-        elif i > 22400.0 and i < 239255255.255:
-            print(f"{i} es de Clase D (Multicast)")
-        elif i > 22400.0 and i < 255255255.255:
-            print(f"{i} es de Clase E (Investigacion)")
+        if i > 10000000.0 and i < 10255255.255 or i > 17216000.0 and i < 17232255.255 or i> 192168000.0 and i < 192169255.255:
+            print(f"{i} IP PRIVADA")
         else:
-            print(False)
+            print(f"{i} IP PUBLICA")
+        
         
 ip_class("127.88.5.5" , "20.14.50.30")
 ip_host("127.88.5.5" , "20.14.50.30")
+ip_priv_publi("172.31.255.255","192.168.255.255")
