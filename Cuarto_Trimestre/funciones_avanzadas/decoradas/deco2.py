@@ -8,7 +8,8 @@ diccionario={'laura': '123',
 
 def ingresar(funcion):
     def envolvente():
-        funcion()
+        print(funcion(diccio))
+    return envolvente
 
 def bienvenida():
     pass
