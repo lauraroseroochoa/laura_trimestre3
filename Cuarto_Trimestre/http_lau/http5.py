@@ -9,7 +9,11 @@ theheaders={
     'Content-Type':'Text',
     'access-token':'12345'
 }
-response=requests.post(url,data=argumentos,headers=theheaders)
+response=requests.put(url,theheaders)
 decodetest=response.content.decode()
 print('*'*20)
 print(decodetest)
+print(decodetest)
+print('-'*20)
+headersprint=response.headers
+print(headersprint)
