@@ -23,9 +23,10 @@ def conversion (args):
     return tupla
 
 def validacion (args):
+    if not (len(args) > 1): 
+        for i in args:
+            args = i
     direc = []
-    val = []
-    suma = 0
     for i in args:
         octeto = ""
         for h in i:
@@ -45,20 +46,40 @@ def validacion (args):
 
 @ip
 def ip_class (args):
+    validar = False
+    if not (len(args) > 1): 
+        for i in args:
+            args = i
+            validar = True
     tupla = conversion (args)
+    lista = []
     for i in tupla:
         if i > 0.0 and i < 127255255.255:
-            print(f"{i} es de Clase A (redes grandes)")
+            if validar == True:
+                lista.append ("Clase A")
+            else:
+                print(f"{i} es de Clase A (redes grandes)")
         elif i > 12800.0 and i < 191255255.255:
+            lista.append ("Clase B")
             print(f"{i} es de Clase B (redes medianas)")
         elif i > 19200.0 and i < 2232515255.255:
-            print(f"{i} es de Clase C (redes pequeñas)")
+            if validar == True:
+                lista.append ("Clase C")
+            else:
+                print(f"{i} es de Clase C (redes pequeñas)")
         elif i > 22400.0 and i < 239255255.255:
-            print(f"{i} es de Clase D (Multicast)")
+            if validar == True:
+                lista.append ("Clase D")
+            else:
+                print(f"{i} es de Clase D (Multicast)")
         elif i > 22400.0 and i < 255255255.255:
-            print(f"{i} es de Clase E (Investigacion)")
+            if validar == True:
+                lista.append ("Clase E")
+            else:
+                print(f"{i} es de Clase E (Investigacion)")
         else:
             print(False)
+    return lista
 
 @ip
 def ip_host (args):
@@ -85,8 +106,30 @@ def ip_priv_publi (args):
             print(f"{i} IP PRIVADA")
         else:
             print(f"{i} IP PUBLICA")
+
+
+@ip
+def ip_subnetting (args):
+    lista = ip_class(args)
+    for i in lista:
+        if i == "Clase A":
+            print("La mascara en decimal es: 255.0.0.0")
+            print("La mascara en CIDR es: /8")
+        elif i == "Clase B":
+            print("La mascara en decimal es: 255.255.0.0")
+            print("La mascara en CIDR es: /16")
+        elif i == "Clase C":
+            print("La mascara en decimal es: 255.255.255.0")
+            print("La mascara en CIDR es: /24")
+        elif i == "Clase D":
+            print("La mascara en decimal es: 255.255.255.255")
+            print("La mascara en CIDR es: /32")
+        elif i == "Clase E":
+            print("La mascara en decimal es: 255.255.255.255")
+            print("La mascara en CIDR es: /32")
         
         
 ip_class("127.88.5.5" , "20.14.50.30")
 ip_host("127.88.5.5" , "20.14.50.30")
 ip_priv_publi("172.31.255.255","192.168.255.255")
+ip_subnetting("127.88.5.5" , "20.14.50.30")
