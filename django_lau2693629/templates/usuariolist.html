@@ -1,62 +1,43 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista usuarios</title>
-    <link href="{%static 'css/stilo.css'%}" rel="stylesheet">
-</head>
-<body>
-    <div class="contenedor">
-        <header>
-            <div class="header1"><h1>ADSO SENA</h1> </div>
-            <DIV class="nombre"><h2>TECNOLOGO EN ANALISIS Y DESARROLLO DE SOFTWARE</h2></DIV>
-            <img id="img1" src="https://tse2.mm.bing.net/th?id=OIP.sW4RJuHuUZMtDlTzDe55cQHaGp&pid=Api&P=0&h=220" alt="logo" width="80px">
-                <nav class="encabezado">
-                    <button class="but" data-target="home">Home</button>
-                    <button class="but" data-target="competencias">Competencias</button>
-                    <button class="but" data-target="herramientas">Herramientas</button>
-                    <button class="but" data-target="ocupaciones">Ocupaciones</button>
-                    
-                </nav>
-        </header>
-            <section class="section1" id="home">
-                <article class="text2">
-                    <img id="img2" src="https://tse4.mm.bing.net/th?id=OIP.lJzPue2YLI6U-r4i_fDDKAHaEK&pid=Api&P=0&h=220" alt="foto" width="300px" height="200px">
-                    El programa de Tecnólogo en Análisis y Desarrollo de Software es una formación pensada para formar profesionales capaces de diseñar y desarrollar aplicaciones informáticas. Esta carrera forma tecnólogos con conocimientos en lenguajes de programación, bases de datos, sistemas operativos, arquitectura de computadores, entre otros. 
-                </article>
-                <h2 class="presen">Informacion del programa:</h2>
-                <article class="text1">
-                    EL EGRESADO TENDRA LA CAPACIDAD DE AUTOAPRENDIZAJE Y ACTUALIZACION PERMANENTE DE
-                    ACUERDO CON LAS NUEVAS TENDENCIAS DE DESARROLLO DE SOFTWARE EN EL MERCADO 
-                </article>
-                <div class="table-container">
-                    <table>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Email</th>
-                            <th>Password</th>
-                        </tr>
-                        <tr>
-                            <td>Laura</td>
-                            <td>Rosero</td>
-                            <td>usuario1@gmail.com</td>
-                            <td>65478asd</td>
-                        </tr>
-                        <tr>
-                            <td>Josue</td>
-                            <td>Torres</td>
-                            <td>usuario2@gmailom</td>
-                            <td>12364dfg</td>
-                        </tr>
-                        
-                    </table>
-                </div>
-                
-            </section>
-        </div>
+    <link href="{%static 'css/tabla_users.css'%}" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Tabla de Usuarios</h1>
+    </header>
+    <main>
+      <div class="table-container">
+        <table>
+            <tr>
+              <th>Nombre</th>
+              <th>Documento</th>
+              <th>Ficha</th>
+              <th>foto</th>
+            </tr>
 
-</body>
+            {%for user in get_usuarios%}
+            <tr>
+              <td>{{user.nombre}}</td>
+              <td>{{user.docuemento}}</td>
+              <td>{{user.ficha}}</td>
+              <td>
+                <img
+                  src="{{user.photo.url}}"
+                  width="40"
+                  height="40"
+                  alt="imagen"
+                />
+              </td>
+            </tr>
+            {%endfor%}
+        </table>
+      </div>
+    </main>
+  </body>
 </html>
