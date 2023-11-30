@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resultados</title>
+  <link rel="stylesheet" type="text/css" href="{%static 'result.css'%}">
+</head>
+<body>
+  <h2>Valores ingresados:</h2>
+  <table>
+    <tr>
+      <th>Valores</th>
+    </tr>
+    {% for valor in valores_lista %}
+    <tr>
+      <td>{{ valor }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

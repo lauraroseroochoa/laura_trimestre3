@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Página de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="number"] {
+            padding: 5px;
+            width: 200px;
+        }
+        button[type="submit"] {
+            padding: 5px 10px;
+            background-color:#87CEEB ;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover{
+        background-color:#4CAF50 ;    
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            background-color: #fff;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color:#4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color:#87CEEB;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Números</h1>
+    <form method="post" action="/add_number">
+        <label for="number">Número:</label>
+        <input type="number" name="number" required>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <h2>Números Agregados:</h2>
+    <ul>
+        {% for item in numbers_with_indices %}
+        <li>
+            {{ item[1] }}
+            <a href="/delete_number/{{ item[0] }}">Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p>
+        <a href="/sort_ascending">Ordenar Ascendente</a> | <a href="/sort_descending">Ordenar Descendente</a>
+    </p>
+</body>
+</html>
