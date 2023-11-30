@@ -41,7 +41,7 @@ class Form_educacion (forms.ModelForm):
 class Form_Empresa (forms.ModelForm):
     class Meta:
         model = Empresa
-        fields = '__all__'
+        fields = ('__all__')
         widgets = {
             'Nombre_empresa' : forms.TextInput (attrs={'class': 'inp',}),
             'Cargo' : forms.TextInput (attrs={'class' : 'inp'}),
@@ -53,7 +53,7 @@ class Form_Empresa (forms.ModelForm):
 class Form_Refe_Person (forms.ModelForm):
     class Meta:
         model = Refe_personales
-        fields = '__all__'
+        fields = ('__all__')
         widgets = {
             'Nombre_person' : forms.TextInput (attrs={'class': 'inp',}),
             'Apellido_person' : forms.TextInput (attrs={'class' : 'inp'}),
@@ -65,7 +65,7 @@ class Form_Refe_Person (forms.ModelForm):
 class Form_Refe_Empresarial (forms.ModelForm):
     class Meta:
         model = Refe_empresarial
-        fields = '__all__'
+        fields = ('__all__')
         widgets = {
             'Nombre_Empresa' : forms.TextInput (attrs={'class': 'inp',}),
             'Nombre_Jefe' : forms.TextInput (attrs={'class' : 'inp'}),

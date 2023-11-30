@@ -6,9 +6,10 @@ from HumanTalentSena.static.python.encriptar import encriptar
 from rest_framework import viewsets
 from . serializer import UsuarioSerializer
 # Create your views here.
-class UsuarioViewset(viewsets.ModelViewSet):
+class UsuarioView(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
+
     
 def visualizar (request):
     get_usuarios = Usuario.objects.all()
